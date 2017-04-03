@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center color="primary" >
+      Proof of Delivery
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+
+    <ion-card-header text-center text-capitalize>
+      Store Details
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label fixed>Store #</ion-label>
+          <ion-label fixed> 1498 </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>Address </ion-label>
+          <ion-label fixed> ABC Plaza,  XYZ St , City , State </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+</ion-card>
+<ion-searchbar placeholder="search trailer"></ion-searchbar>
+<ion-list>
+  <button ion-item *ngFor="let item of trailerDetails" (click)="itemSelected(item)">
+    <h2>Trailer ID: {{ item.id }}</h2>
+    <h3>Origin ID: {{ item.Origin_str_no }}</h3>
+    <p>{{item.desc}}</p>
+  </button>  
+</ion-list>
+
+
+</ion-content>
